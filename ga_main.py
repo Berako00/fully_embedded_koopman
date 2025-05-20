@@ -145,9 +145,8 @@ def main():
             json.dump(best_params, f, indent=4)
         print("Saved GA best parameters to best_params.txt")
 
-    model = AUTOENCODER(Num_meas, Num_inputs, Num_x_Obsv, Num_x_Neurons,
-                    Num_u_Obsv, Num_u_Neurons, Num_hidden_x,
-                    Num_hidden_x, Num_hidden_u, Num_hidden_u)
+    # Instantiate the model and move it to the GPU (if available)
+    model = AUTOENCODER(Num_meas, Num_inputs, Num_x_Obsv, Num_x_Neurons, Num_u_Obsv, Num_u_Neurons, Num_hidden_x_encoder, Num_hidden_u_encoder)
 
     # Training Loop Parameters
     start_training_time = time.time()
