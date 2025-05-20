@@ -3,6 +3,7 @@ import copy
 import torch
 from training import trainingfcn_ga, trainingfcn_mixed
 import concurrent.futures
+import json
 from multiprocessing import get_context
 
 def evaluate_candidate(check_epoch, candidate, train_tensor, test_tensor, eps, lr, batch_size, S_p, T, dt, M, device):
